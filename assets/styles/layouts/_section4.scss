@@ -1,0 +1,73 @@
+#section4 {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    #inner {
+        width: 70%;
+        height: 825px;
+        display: grid;
+        grid-template-columns: 45% 45%;
+        justify-content: space-between;
+        @media screen and (max-width: 950px) {
+            grid-template-columns: 100%;
+            grid-template-rows: 50% 50%;
+        }
+        .each-div {
+            display: grid;
+            grid-template-rows: 70% 7% 7% 16%;
+            justify-items: center;
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                cursor: pointer;
+            }
+            h2 {
+                display: flex;
+                align-items: center;
+                @media screen and (max-width: 950px) {
+                    margin-top: 20px;
+                }
+                @media screen and (max-width: 400px) {
+                    font-size: 1.2rem;
+                }
+                @media screen and (max-width: 300px) {
+                    font-size: 1rem;
+                }
+            }
+            p {
+                margin-top: 10px;
+                cursor: default;
+                &:hover {
+                    color: black;
+                }
+                @media screen and (max-width: 400px) {
+                    font-size: 0.8rem;
+                }
+            }
+            button {
+                cursor: pointer;
+                border: solid 3px black;
+                font-weight: bold;
+                font-size: 1.1rem;
+                width: 50%;
+                height: 45%;
+                background-color: white;
+                &:hover {
+                    background-color: black;
+                    color: white;
+                    transition: ease 0.5s;
+                }
+                @media screen and (max-width: 950px) {
+                    margin: auto 0;
+                }
+                @media screen and (max-width: 520px) {
+                    font-size: 0.8rem;
+                }
+                @media screen and (max-width: 400px) {
+                    font-size: 0.7rem;
+                }
+            }
+        }
+    }
+}
